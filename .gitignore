@@ -1,12 +1,47 @@
-# Dependencies
-node_modules/
-/.pnp
-.pnp.js
+# ==========================================
+# .NET / C# / Visual Studio exclusions
+# ==========================================
+.vs/
+.vscode/*
+!.vscode/extensions.json
+[Bb]in/
+[Oo]bj/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.pidb
+*.booproj
+*.svclog
+*.sln.docstates
 
-# Production build artifacts
+# Database files
+*.db
+*.db-shm
+*.db-wal
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa]rms/
+[Aa]rm64/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# ==========================================
+# Node.js / React / Vite exclusions
+# ==========================================
+node_modules/
+**/node_modules/
 dist/
+**/dist/
 dist-ssr/
+**/dist-ssr/
 build/
+**/build/
 
 # Environment variables & secrets (Security)
 .env
@@ -16,9 +51,14 @@ build/
 .env.test.local
 .env.production.local
 *.env
+**/.env
+**/.env.local
+**/.env.*.local
+**/*.env
 
-# Always track example environment templates
+# Always track example templates
 !.env.example
+!**/.env.example
 
 # Logs
 logs
@@ -27,19 +67,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-lerna-debug.log*
-
-# Editor & IDE directories
-.vscode/*
-!.vscode/extensions.json
-.idea/
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-*.sublime-workspace
-*.sublime-project
 
 # OS generated files
 .DS_Store
@@ -49,4 +76,3 @@ lerna-debug.log*
 .Trashes
 ehthumbs.db
 Thumbs.db
-
